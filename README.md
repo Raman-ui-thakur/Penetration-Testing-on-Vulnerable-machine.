@@ -1,4 +1,4 @@
-
+Penetration-testing-on-vulnerable-machine-
 Penetration Testing Preparation and Workflow
 Preparation
 Download Kali Linux
@@ -35,4 +35,4 @@ If the exploit is successful, you might gain some level of access to the vulnera
 Documentation
 Throughout the process, record your steps, findings, and the outcome of each exploit attempt. This will be crucial for your project report.
 
-##Videos also included here to give you an brief idea , how things are work in this project..
+##Videos also included here to give you an brief idea , how things are work in this project.
