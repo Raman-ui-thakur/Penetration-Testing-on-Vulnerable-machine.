@@ -1,27 +1,38 @@
-Penetration Testing on Vulnerable machine
-Metasploitable-2
-Set Both machine on same network
-Open Linux and start its terminal
-Step 1:- Scan your network with netdiscover command
-We Found that Ip 192.168.235.135 is the IP of our Target Machine.
-Step2:- Use nmap –sS –sV –A –p1-1000
-To scan port of target machine from port number 1 to 1000We See that Port Number 22/tcp whose state is open and have service SSH running on it.
-Step3 :- Use msfconsole
-It provide various auxiliary,payloads and exploits to enter machine
-Step4 :- Search ssh_login We try to enter from port no 22 which is ssh so we search its auxiliaries.
-Step5 :- Use 0 auxilirary/scanner/ssh/ssh_login.
-Step6:- Show Options This command give you the information about the ssh_login auxilirary Options.
-Step7 :- Now set the Options according to our recquirment.
- set RHOSTS = your target Machine IP
- set STOP_ON_SUCCESS = true
- Set USER_FILE = your user file for attack
- set PASS_FILE = your password file associated for user file
-Step 8:- Show Options to check the options you set are successful.
-Step 9:- Exploit it will start the execution of attack by doing continuously
-striking id password of id file and pass file.
-When it got the Success it stop the execution.
-Step 10:- Check your user by whoami Command.
-Step11:- Open the target Machine (Metasploitable-2)
-Enter the ID and Pass which got success in attack
-Id => msfadmin
-Pass=> msfadmin
+
+Penetration Testing Preparation and Workflow
+Preparation
+Download Kali Linux
+Head over to the official Kali Linux website and download the latest version suitable for your system.
+
+Create a Vulnerable Machine
+There are two main options:
+
+Virtual Machine (VM)
+Use software like VirtualBox or VMware to create a new virtual machine. You can download pre-configured vulnerable machine images from resources like VulnHub or exploit exercises from Metasploitable.
+
+Dedicated Machine (Caution Advised)
+If you have a spare machine, you can install a vulnerable operating system directly on it. Warning: Only perform this on a completely isolated network you have full control over to avoid accidentally damaging any critical systems.
+
+Penetration Testing Workflow
+Install Kali Linux
+Follow the official installation guide for your chosen platform (Windows/macOS/Linux) to install Kali Linux on your primary machine.
+
+Start the Vulnerable Machine
+If you opted for a VM, boot up the pre-configured vulnerable machine image you downloaded.
+
+Information Gathering
+Use built-in tools in Kali like nmap to scan the vulnerable machine's IP address and identify open ports and services running. This helps understand potential attack vectors.
+
+Exploitation with Metasploit
+Open Metasploit within Kali using msfconsole. Search for exploits corresponding to the vulnerabilities identified in the previous step. Metasploit has a vast exploit database.
+
+Launching the Exploit
+Once you have a suitable exploit, configure it with the target machine's IP address and any other necessary details. Carefully review the exploit options before launching it to avoid unintended consequences.
+
+Post-Exploitation (Optional)
+If the exploit is successful, you might gain some level of access to the vulnerable machine. Depending on your project goals, you can explore maintaining access, escalating privileges, or simulating further attacks.
+
+Documentation
+Throughout the process, record your steps, findings, and the outcome of each exploit attempt. This will be crucial for your project report.
+
+##Videos also included here to give you an brief idea , how things are work in this project..
